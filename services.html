@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Playfair+Display:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Atelier Ikebana</title>
+     <meta content="Arrangements | Kintsugi | Consultation" property="og:title">
+    <meta content="I wish to spread ikebana art and culture through the first ikebana school in Lebanon teaching Sogetsu textbooks in my atelier that I founded and organizing classes and workshops of a variety of popular arts especially Japanese by collaborating with Japanese instructors to give insight into the artistic creativity in Japan and the values of refinement, harmony and discernment that shapes societies." property="og:description">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/instafeed.min.js"></script>
+     <link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/index.html">
+                <img src="./images/Logo.svg" alt="">
+            </a>
+            <div onclick="myFunction()"  class="menu-button">
+                <div id="first-line" class="menu-lines"></div>
+                <div id="second-line" class="menu-lines"></div>
+                <div id="third-line" class="menu-lines"></div>
+            </div>
+            <ul id="links-holder" class="phone-nav">
+                <li>
+                    <a  href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/workshopsandlessons.html">workshops & lessons</a>
+                </li>
+                <li>
+                    <a class="current" href="/services.html">Services</a>
+                </li>
+                <li>
+                    <a href="/contact.html">Contact</a>
+                </li>
+               
+            </ul>
+            <ul>
+                <li>
+                    <a  href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/workshopsandlessons.html">workshops & lessons</a>
+                </li>
+                <li>
+                    <a class="current" href="/services.html">Services</a>
+                </li>
+                <li>
+                    <a href="/contact.html">Contact</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+    <div class="services-wrapper">
+        <div class="container">
+           
+              
+              <h1>Arrangements & More</h1>
+              <p class="ltb">I wish to spread ikebana art and culture through the first ikebana school in Lebanon teaching Sogetsu textbooks in my atelier that I founded and organizing classes and workshops of a variety of popular arts especially Japanese by collaborating with Japanese instructors to give insight into the artistic creativity in Japan and the values of refinement, harmony and discernment that shapes societies.</p>
+              <div class="services-boxes">
+                  <div class="services-box">
+                      <h3>Arrangements</h3>
+                      <div class="green-line"></div>
+                      <p class="ltb"> A disciplined art form in which the arrangement is a living thing where nature and humanity are brought together.</p>
+                    
+                  </div>
+                  <div class="services-box">
+                    <h3>Kintsugi</h3>
+                    <div class="green-line"></div>
+                    <p class="ltb">The Japanese art of putting broken pottery pieces back together with gold — a metaphor for embracing your flaws and imperfections.</p>
+                  </div>
+                  <div class="services-box">
+                    <h3>Consultation</h3>
+                    <div class="green-line"></div>
+                    <p class="ltb">We can guide with our customized consulting and design support services</p>
+                  </div>
+              </div>
+            
+              
+        </div>
+    </div>
+    <div class="services-wrapper">
+        <div class="container">
+           
+              
+              <h1>Follow us</h1>
+            
+              <div id="instafeed"></div>
+              
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Copyright ©️ 2021 Atelier Ikebana. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/atelierikebanalb/">
+                    <img src="./images/facebook.svg" alt="" srcset="">
+                </a>
+                <a href="https://www.instagram.com/atelierikebanalb/">
+                    <img src="./images/instagram.svg" alt="" srcset="">
+                </a>
+            </div>
+        </div>
+      
+    </footer>
+</body>
+
+<script>
+    $.ajax({
+    type: 'get',
+    dataType: 'json',
+    url: 'https://ig.instant-tokens.com/users/7fbd89ef-8b9a-4a53-9645-ac6d0945c69d/instagram/17841407613630056/token?userSecret=k1wapdutj4hr1ckn7pltpd',
+
+    success: function (response) {
+        var feed = new Instafeed({
+            target: 'instafeed',
+            accessToken: response.Token, // Access token from json response
+            limit:9,
+            template: '<a class="insta-box" href="{{link}}"><img class="insta-image" title="{{caption}}" src="{{image}}"/></a>'
+    });
+    feed.run();
+}});
+</script>
+<script src="./js/script.js"></script>
+</html>
